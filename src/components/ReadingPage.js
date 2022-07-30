@@ -10,7 +10,7 @@ const ReadingPage = () => {
 
         let params = useParams();
         const navigate = useNavigate();
-        console.log(params)
+        // console.log(params)
 
         const [info, setInfo] = useState([]);
 
@@ -18,11 +18,11 @@ const ReadingPage = () => {
                 const docRef = doc(db, params.catogory, params.title);
                 const docSnap = getDoc(doc(db, params.catogory, params.title)).then(docSnap => {
                         if (docSnap.exists()) {
-                                console.log(docSnap.data())
+                                // console.log(docSnap.data())
                                 setInfo(docSnap.data())
                         }
                         else {
-                                alert("LOL")
+                                alert("Error")
                         }
                 })
         }, [])

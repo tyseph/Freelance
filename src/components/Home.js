@@ -54,19 +54,19 @@ const Home = () => {
         useEffect(() => {
                 const f = query(collection(db, 'fruit'))
                 onSnapshot(f, (querySnapShot) => {
-                        console.log("DATA", querySnapShot.docs.map((d) => d.data().title))
+                        // console.log("DATA", querySnapShot.docs.map((d) => d.data().title))
                         setFruit(querySnapShot.docs.map(d => d.data()))
                 })
 
                 const v = query(collection(db, 'vegetable'))
                 onSnapshot(v, (querySnapShot) => {
-                        console.log("DATA", querySnapShot.docs.map((d) => d.data().title))
+                        // console.log("DATA", querySnapShot.docs.map((d) => d.data().title))
                         setVegetable(querySnapShot.docs.map(d => d.data()))
                 })
 
                 const m = query(collection(db, 'meat'))
                 onSnapshot(m, (querySnapShot) => {
-                        console.log("DATA", querySnapShot.docs.map((d) => d.data().title))
+                        // console.log("DATA", querySnapShot.docs.map((d) => d.data().title))
                         setMeat(querySnapShot.docs.map(d => d.data()))
                 })
         }, [])

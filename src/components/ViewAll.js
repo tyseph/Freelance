@@ -11,7 +11,7 @@ const ReadingPage = () => {
 
         let params = useParams();
         const navigate = useNavigate();
-        console.log(params)
+        // console.log(params)
 
         const [info, setInfo] = useState([]);
 
